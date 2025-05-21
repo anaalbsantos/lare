@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         borrow: "#8F4528",
+        dark: "#333333",
+        gray: "#F4F5F7",
       },
     },
   },

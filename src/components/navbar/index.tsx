@@ -3,7 +3,7 @@ import { ShoppingCart, Search } from "lucide-react";
 
 const NavBar = () => {
   return (
-    <div className="flex flex-row w-full items-center justify-between h-16 text-black py-4 px-8">
+    <div className="flex flex-row w-full items-center justify-between h-16 text-dark py-4 px-8">
       <div className="flex flex-row gap-1">
         <img src={LareLogo} alt="Larê Logo" width={20} />
         <h2 className="font-bold">Larê</h2>

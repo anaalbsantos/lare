@@ -1,4 +1,7 @@
-export interface TestProps {
+export interface ProductProps {
   title: string;
-  description: string;
+  description?: string;
+  image: string;
+  price?: number;
+  room?: string;
 }
