@@ -1,6 +1,6 @@
 # larê
 
-Larê is a contemporary furniture store that brings warmth, elegance, and comfort into every space.
+Larê is a contemporary furniture store that brings warmth, elegance, and comfort into every space :)
 
 ## Getting Started
 
