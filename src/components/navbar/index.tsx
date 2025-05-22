@@ -1,5 +1,6 @@
 import { LareLogo } from "../../assets";
-import { ShoppingCart, Search } from "lucide-react";
+import { Search } from "lucide-react";
+import { Cart } from "..";
 
 const NavBar = () => {
   return (
@@ -14,7 +15,7 @@ const NavBar = () => {
       </div>
       <div className="flex flex-row gap-4">
         <Search size={20} />
-        <ShoppingCart size={20} />
+        <Cart />
       </div>
     </div>
   );
