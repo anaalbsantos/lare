@@ -1,43 +1,6 @@
-import { Background, Bed, Sofa } from "../../assets";
+import { Background } from "../../assets";
 import { NavBar, Product } from "../../components";
-
-const products = [
-  {
-    title: "Cama Box Com Colchão Queen",
-    image: Bed,
-    price: 1290.9,
-  },
-  {
-    title: "Sofá Retrátil 3 Lugares",
-    image: Sofa,
-    price: 1899.99,
-  },
-  {
-    title: "Cama Solteiro Madeira Maciça",
-    image: Bed,
-    price: 799.5,
-  },
-  {
-    title: "Cama Casal Estofada",
-    image: Bed,
-    price: 999.0,
-  },
-  {
-    title: "Sofá 2 Lugares Compacto",
-    image: Sofa,
-    price: 1290.0,
-  },
-  {
-    title: "Sofá Canto Modular",
-    image: Sofa,
-    price: 2490.0,
-  },
-  {
-    title: "Sofá Chaise Longue",
-    image: Sofa,
-    price: 2090.0,
-  },
-];
+import { products } from "@/api/data";
 
 const Home = () => {
   return (
@@ -57,6 +20,7 @@ const Home = () => {
           {products.map((product, idx) => (
             <Product
               key={idx}
+              id={product.id}
               title={product.title}
               image={product.image}
               price={product.price}

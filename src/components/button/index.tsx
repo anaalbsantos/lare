@@ -11,7 +11,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         {...rest}
-        className="text-white bg-borrow px-20 hover:border-none w-fit border-none focus-visible:outline-none"
+        className="text-white bg-borrow px-20 hover:border-none w-fit border-none focus-visible:outline-none hover:opacity-90"
       >
         {label}
       </button>

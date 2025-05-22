@@ -15,7 +15,7 @@ const Quantity = () => {
   };
 
   return (
-    <div className="flex flex-row gap-5 items-center border border-[#8a8a8a] rounded-md w-fit ">
+    <div className="flex flex-row gap-5 items-center border rounded-md w-fit ">
       <button
         onClick={decrement}
         className="p-2 bg-white border-none focus-visible:outline-none"
