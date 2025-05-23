@@ -1,4 +1,4 @@
-import { NavBar, Button, Quantity } from "../../components";
+import { NavBar, Button, Quantity, Footer } from "../../components";
 import { useParams } from "react-router-dom";
 import { products, cart } from "@/api/data";
 
@@ -33,6 +33,7 @@ const Product = () => {
           <Button label="Adicionar ao carrinho" onClick={addProductOnCart} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

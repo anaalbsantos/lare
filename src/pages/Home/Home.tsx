@@ -1,5 +1,5 @@
 import { Background } from "../../assets";
-import { NavBar, Product } from "../../components";
+import { Footer, NavBar, Product } from "../../components";
 import { products } from "@/api/data";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         </p>
         <img src={Background} className="w-full object-cover" />
       </div>
-      <div className="flex flex-col p-6 gap-6">
+      <div className="flex flex-col p-10 gap-6">
         <p className="font-bold text-2xl lg:text-4xl text-dark text-center">
           nossos produtos
         </p>
@@ -28,6 +28,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
