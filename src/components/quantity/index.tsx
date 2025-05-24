@@ -1,17 +1,17 @@
 "use client";
 
+import type { QuantityProps } from "@/types";
 import { MinusIcon, PlusIcon } from "lucide-react";
-import { useState } from "react";
 
-const Quantity = () => {
-  const [quantity, setQuantity] = useState(1);
-
+const Quantity = ({ quantity, setQuantity }: QuantityProps) => {
   const decrement = () => {
-    if (quantity > 0) setQuantity((prev) => prev - 1);
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
   };
 
   const increment = () => {
-    if (quantity < 10) setQuantity((prev) => prev + 1);
+    if (quantity < 10) setQuantity(quantity + 1);
   };
 
   return (

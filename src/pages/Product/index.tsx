@@ -1,14 +1,42 @@
 import { NavBar, Button, Quantity, Footer } from "../../components";
 import { useParams } from "react-router-dom";
-import { products, cart } from "@/api/data";
+import { useEffect, useState } from "react";
+import type { ProductProps } from "@/types";
+import {
+  findProductInCart,
+  getProductById,
+  postCart,
+  patchProductInCart,
+} from "@/api";
+import { formatPrice } from "@/utils";
 
 const Product = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+  const [product, setProduct] = useState<ProductProps>();
+  const [quantity, setQuantity] = useState(1);
 
-  const addProductOnCart = () => {
-    if (product) {
-      cart.push(product);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      if (id === undefined) return;
+      const data = await getProductById(id);
+      setProduct(data);
+    };
+
+    fetchProduct();
+  }, [id]);
+
+  const addProductOnCart = async () => {
+    const foundProduct = await findProductInCart(id || "");
+    if (Array.isArray(foundProduct) && foundProduct.length > 0) {
+      await patchProductInCart(
+        foundProduct[0].id,
+        foundProduct[0].quantity + quantity
+      );
+    } else {
+      await postCart({
+        productId: id || "",
+        quantity: quantity,
+      });
     }
   };
 
@@ -16,19 +44,21 @@ const Product = () => {
     <div className="">
       <NavBar />
       <div className="flex flex-col items-center lg:items-start lg:flex-row py-10 px-40 gap-10 text-dark">
-        <img
-          src={product?.image}
-          className="relative object-cover max-h-[400px] w-full object-center md:max-h-[500px] 2xl:max-h-[550px] rounded-xl transition-opacity duration-500 delay-200 aspect-square"
-        />
+        {product && (
+          <img
+            src={product.image}
+            className="relative object-cover max-h-[400px] w-full object-center md:max-h-[500px] 2xl:max-h-[550px] rounded-xl transition-opacity duration-500 delay-200 aspect-square"
+          />
+        )}
         <div className="flex flex-col gap-5">
           <div>
             <p className="font-semibold text-2xl">{product?.title}</p>
-            <p className="text-xl">R$ {product?.price}</p>
+            <p className="text-xl">R$ {formatPrice(product?.price || 0)}</p>
           </div>
           <p className="text-[#8a8a8a]">{product?.description}</p>
           <div>
             <p>Quantidade</p>
-            <Quantity />
+            <Quantity quantity={quantity} setQuantity={setQuantity} />
           </div>
           <Button label="Adicionar ao carrinho" onClick={addProductOnCart} />
         </div>

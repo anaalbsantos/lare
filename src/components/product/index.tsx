@@ -1,5 +1,6 @@
 import type { ProductProps } from "../../types";
 import { useNavigate } from "react-router-dom";
+import { formatPrice } from "@/utils";
 
 const Product = ({ title, image, price, id }: ProductProps) => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Product = ({ title, image, price, id }: ProductProps) => {
     >
       <img src={image} className="w-full h-60 lg:h-72" />
       <div className="flex flex-col items-start p-3 ">
-        <p className="font-semibold text-sm">R$ {price}</p>
+        <p className="font-semibold text-sm">R$ {formatPrice(price)}</p>
         <p className="font-normal text-xs">{title}</p>
       </div>
     </button>

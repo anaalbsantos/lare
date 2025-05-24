@@ -1,8 +1,20 @@
+import { getProducts } from "@/api";
 import { Background } from "../../assets";
 import { Footer, NavBar, Product } from "../../components";
-import { products } from "@/api/data";
+import { useEffect, useState } from "react";
+import type { ProductProps } from "@/types";
 
 const Home = () => {
+  const [products, setProducts] = useState<ProductProps[]>([]);
+
+  const fetchProducts = async () => {
+    await getProducts().then((data) => setProducts(data));
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <div className="">
       <NavBar />
