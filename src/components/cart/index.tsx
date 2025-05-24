@@ -26,6 +26,13 @@ const Cart = () => {
     fetchCart();
   };
 
+  const handleCheckout = () => {
+    const promises = cart.map((item) => removeProductFromCart(item.id));
+    Promise.all(promises).then(() => {
+      setCart([]);
+    });
+  };
+
   const fetchCart = async () => {
     const cart = await getCart();
     const products = await Promise.all(
@@ -132,7 +139,7 @@ const Cart = () => {
             </span>
           </div>
           <SheetClose asChild>
-            <Button label="Comprar" />
+            <Button label="Comprar" onClick={handleCheckout} />
           </SheetClose>
         </SheetFooter>
       </SheetContent>
