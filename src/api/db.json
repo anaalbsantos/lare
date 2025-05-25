@@ -57,5 +57,11 @@
       "description": "Poltrona reclinável com design ergonômico e acabamento premium. Ideal para leitura, descanso ou assistir TV, possui mecanismo de reclinação suave e apoio para os pés. Estofamento em tecido macio, estrutura reforçada e fácil de limpar. Um toque de conforto e elegância para qualquer ambiente."
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "2692",
+      "productId": "7",
+      "quantity": 1
+    }
+  ]
 }

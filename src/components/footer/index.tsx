@@ -1,7 +1,7 @@
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 const Footer = () => {
   return (
-    <footer className="w-full bg-dark text-white p-10">
+    <footer id="footer" className="w-full bg-dark text-white p-10">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         <div>
           <h2 className="text-xl font-bold mb-2">Larê</h2>

@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { removeProductFromCart, getCart, getProductById } from "@/api";
 import type { CartProps, ProductProps } from "@/types";
 import { formatPrice } from "@/utils";
+import { toast } from "@/hooks/use-toast";
 // import { Quantity } from "..";
 
 const Cart = () => {
@@ -27,10 +28,30 @@ const Cart = () => {
   };
 
   const handleCheckout = () => {
-    const promises = cart.map((item) => removeProductFromCart(item.id));
-    Promise.all(promises).then(() => {
-      setCart([]);
-    });
+    try {
+      const hasItemsInCart = cart.length > 0;
+      if (hasItemsInCart) {
+        const promises = cart.map((item) => removeProductFromCart(item.id));
+        Promise.all(promises).then(() => {
+          setCart([]);
+        });
+
+        toast({
+          title:
+            "Compra realizada com sucesso! Obrigada por comprar na Larê ;)",
+          duration: 2000,
+        });
+      } else {
+        toast({
+          title: "Adicione produtos no carrinho para realizar uma compra!",
+          duration: 2000,
+        });
+      }
+    } catch {
+      toast({
+        title: "❌ Erro ao finalizar compra",
+      });
+    }
   };
 
   const fetchCart = async () => {
@@ -49,13 +70,24 @@ const Cart = () => {
 
   useEffect(() => {
     fetchCart();
+
+    // cria um event listener para escutar quando um produto for adicionado
+    const handleCartUpdate = () => {
+      fetchCart();
+    };
+    window.addEventListener("cartUpdated", handleCartUpdate);
+
+    // remove o event
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdate);
+    };
   }, []);
 
   return (
     <Sheet>
       <SheetTrigger asChild className="cursor-pointer">
         <div className="relative w-fit">
-          <ShoppingCart width={20} />
+          <ShoppingCart width={20} className="text-dark hover:text-borrow" />
           {cart.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-borrow text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
               {cart.length}
@@ -139,7 +171,7 @@ const Cart = () => {
             </span>
           </div>
           <SheetClose asChild>
-            <Button label="Comprar" onClick={handleCheckout} />
+            <Button label="Finalizar compra" onClick={handleCheckout} />
           </SheetClose>
         </SheetFooter>
       </SheetContent>

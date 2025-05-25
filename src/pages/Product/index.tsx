@@ -9,6 +9,7 @@ import {
   patchProductInCart,
 } from "@/api";
 import { formatPrice } from "@/utils";
+import { toast } from "@/hooks/use-toast";
 
 const Product = () => {
   const { id } = useParams();
@@ -26,16 +27,28 @@ const Product = () => {
   }, [id]);
 
   const addProductOnCart = async () => {
-    const foundProduct = await findProductInCart(id || "");
-    if (Array.isArray(foundProduct) && foundProduct.length > 0) {
-      await patchProductInCart(
-        foundProduct[0].id,
-        foundProduct[0].quantity + quantity
-      );
-    } else {
-      await postCart({
-        productId: id || "",
-        quantity: quantity,
+    try {
+      const foundProduct = await findProductInCart(id || "");
+      if (Array.isArray(foundProduct) && foundProduct.length > 0) {
+        await patchProductInCart(
+          foundProduct[0].id,
+          foundProduct[0].quantity + quantity
+        );
+      } else {
+        await postCart({
+          productId: id || "",
+          quantity: quantity,
+        });
+      }
+      // envia evento para atualizar carrinho
+      window.dispatchEvent(new Event("cartUpdated"));
+      toast({
+        title: "✅ Produto adicionado ao carrinho",
+        duration: 2000,
+      });
+    } catch {
+      toast({
+        title: "❌ Erro ao adicionar produto ao carrinho",
       });
     }
   };
