@@ -5,8 +5,8 @@ Larê é uma loja de móveis contemporâneos que busca transformar ambientes com
 ## 💻 Tecnologia utilizadas
 - [React](https://react.dev/) + [Vite](https://vitejs.dev/): Estrutura moderna e performática para construção da interface do usuário com desenvolvimento eficiente.  
 - [Tailwind CSS](https://tailwindcss.com/): Framework utilitário para estilização rápida e responsiva com classes CSS.  
-- [Shadcn/UI](https://ui.shadcn.dev/): Biblioteca de componentes prontos, acessíveis e personalizáveis, baseada em Tailwind, para acelerar o desenvolvimento com design consistente.  
-- [JSON Server](https://github.com/typicode/json-server): API REST fake para simular um backend e testar requisições e persistência de dados.
+- [Shadcn/UI](https://ui.shadcn.com/): Biblioteca de componentes prontos, acessíveis e personalizáveis, baseada em Tailwind, para acelerar o desenvolvimento com design consistente.  
+- [JSON Server](https://www.npmjs.com/package/json-server): API REST fake para simular um backend e testar requisições e persistência de dados.
 
 
 ## ✨ Rodando o projeto
