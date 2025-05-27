@@ -10,21 +10,21 @@
     {
       "id": "2",
       "title": "Sofá Retrátil 3 Lugares",
-      "image": "/images/couch.jpg",
+      "image": "/images/couch2.jpg",
       "price": 1899.99,
       "description": "Sofá retrátil para 3 pessoas, perfeito para salas de estar modernas e aconchegantes. Possui assentos extensíveis e encostos reclináveis, permitindo diferentes configurações para relaxar ou receber visitas. O revestimento em tecido resistente e fácil de limpar, aliado à espuma de alta densidade, oferece conforto e praticidade no dia a dia. Design contemporâneo que valoriza qualquer ambiente."
     },
     {
       "id": "3",
-      "title": "Cama Solteiro Madeira",
-      "image": "/images/bed.jpg",
+      "title": "Mesa de Jantar",
+      "image": "/images/table.jpg",
       "price": 799.5,
-      "description": "Cama de solteiro feita em madeira maciça, resistente e com design clássico. Ideal para quartos infantis, juvenis ou de hóspedes, combina robustez com um visual atemporal. O acabamento em verniz realça a beleza natural da madeira, enquanto a estrutura reforçada garante estabilidade e longa vida útil. Fácil de montar e compatível com diversos tipos de colchão."
+      "description": "Mesa de jantar com 4 cadeiras, ideal para famílias e reuniões. O design moderno e a madeira maciça proporcionam durabilidade e elegância. A estrutura é reforçada para suportar o uso diário, enquanto o revestimento em tecido macio e resistente oferece conforto e praticidade. Fácil de limpar e combinar com diversos estilos de decoração."
     },
     {
       "id": "4",
       "title": "Cama Casal Estofada",
-      "image": "/images/bed.jpg",
+      "image": "/images/bed2.jpg",
       "price": 999,
       "description": "Cama de casal com estrutura estofada, proporcionando conforto e elegância ao ambiente. O estofamento em tecido macio e resistente oferece um toque sofisticado, enquanto a cabeceira alta garante apoio extra para leitura ou descanso. Estrutura interna de madeira de reflorestamento, sustentável e durável. Ideal para quem busca unir estilo e funcionalidade no quarto."
     },
@@ -37,17 +37,17 @@
     },
     {
       "id": "6",
-      "title": "Sofá Canto Modular",
-      "image": "/images/couch.jpg",
+      "title": "Escrivaninha Madeira",
+      "image": "/images/desk.jpg",
       "price": 2490,
-      "description": "Sofá de canto modular, versátil e perfeito para acomodar toda a família. Com módulos independentes, permite diversas configurações para se adaptar ao seu espaço. Revestimento em tecido de alta resistência, fácil de limpar, e almofadas macias para máximo conforto. Ideal para salas amplas, áreas de convivência ou home theaters."
+      "description": "Escrivaninha de madeira maciça, ideal para escritórios ou áreas de convivência. O design clássico e a madeira natural proporcionam durabilidade e elegância. A estrutura é reforçada para suportar o uso diário, enquanto o revestimento em tecido macio e resistente oferece conforto e praticidade. Fácil de montar e combinar com diversos estilos de decoração."
     },
     {
       "id": "7",
-      "title": "Sofá Chaise Longue",
-      "image": "/images/couch.jpg",
+      "title": "Guarda-Roupa Espelhado",
+      "image": "/images/wardrobe.jpg",
       "price": 2090,
-      "description": "Sofá com chaise longue, proporcionando conforto extra para relaxar. O design elegante e contemporâneo valoriza qualquer sala de estar, enquanto a chaise permite esticar as pernas e aproveitar momentos de descanso. Estrutura robusta, espuma de alta densidade e tecido agradável ao toque garantem durabilidade e bem-estar. Perfeito para quem busca sofisticação e funcionalidade."
+      "description": "Guarda-roupa 3 portas com espelho, ideal para quartos. O design moderno e a madeira natural proporcionam durabilidade e elegância. A estrutura é reforçada para suportar o uso diário, enquanto o revestimento em tecido macio e resistente oferece conforto e praticidade. Fácil de montar e combinar com diversos estilos de decoração."
     },
     {
       "id": "8",
@@ -55,7 +55,27 @@
       "image": "/images/armchair.jpg",
       "price": 1599.99,
       "description": "Poltrona reclinável com design ergonômico e acabamento premium. Ideal para leitura, descanso ou assistir TV, possui mecanismo de reclinação suave e apoio para os pés. Estofamento em tecido macio, estrutura reforçada e fácil de limpar. Um toque de conforto e elegância para qualquer ambiente."
+    },
+    {
+      "id": "9",
+      "title": "Cama Solteiro",
+      "image": "/images/bed3.jpg",
+      "price": 1290,
+      "description": "Cama solteiro com estrutura de madeira maciça, ideal para quartos juvenis ou de hóspedes. O design clássico e a madeira natural proporcionam durabilidade e elegância. A estrutura é reforçada para suportar o uso diário, enquanto o revestimento em tecido macio e resistente oferece conforto e praticidade. Fácil de montar e combinar com diversos estilos de decoração."
+    },
+    {
+      "id": "10",
+      "title": "Rack de TV",
+      "image": "/images/rack.jpg",
+      "price": 1180,
+      "description": "Rack para sala de estar com 3 portas, ideal para guardar televisão e outros itens. O design moderno e a madeira natural proporcionam durabilidade e elegância. A estrutura é reforçada para suportar o uso diário, enquanto o revestimento em tecido macio e resistente oferece conforto e praticidade. Fácil de montar e combinar com diversos estilos de decoração."
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "3766",
+      "productId": "5",
+      "quantity": 2
+    }
+  ]
 }

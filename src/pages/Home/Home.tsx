@@ -19,10 +19,10 @@ const Home = () => {
     <div className="">
       <NavBar />
       <div className="relative w-full h-fit flex justify-center items-center -mt-16">
-        <p className="absolute flex w-[50%] font-bold text-center text-white text-4xl md:text-5xl lg:text-7xl">
+        <p className="absolute flex w-[50%] font-bold text-center text-white text-xl sm:text-3xl md:text-5xl lg:text-7xl">
           descubra o prazer de estar em casa.
         </p>
-        <img src={Background} className="w-full object-cover" />
+        <img src={Background} className=" w-full object-cover" />
       </div>
       <div id="our-products" className="flex flex-col p-20 gap-6">
         <p className="font-bold text-2xl lg:text-4xl text-dark text-center">

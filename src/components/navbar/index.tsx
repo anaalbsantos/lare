@@ -1,5 +1,4 @@
 import { LareLogo } from "../../assets";
-import { Search } from "lucide-react";
 import { Cart } from "..";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -54,7 +53,7 @@ const NavBar = () => {
     >
       <div className="flex flex-row gap-1">
         <img src={LareLogo} alt="Larê Logo" width={20} />
-        <h2 className="font-bold">Larê</h2>
+        <h2 className="font-bold hidden sm:block">Larê</h2>
       </div>
       <div className="flex flex-row gap-4 font-medium text-[15px]">
         <a
@@ -73,10 +72,6 @@ const NavBar = () => {
         </a>
       </div>
       <div className="flex flex-row gap-4">
-        <Search
-          size={20}
-          className="text-dark hover:text-borrow cursor-pointer"
-        />
         <Cart />
       </div>
     </div>
